@@ -16,3 +16,16 @@ class User(BaseModel):
       }
     }
   }
+
+class UserSignIn(BaseModel):
+  email: EmailStr
+  password: str
+
+  model_config = {
+    "json_schema_extra": {
+      "example": {
+        "email": "fastAPI@gmail.com",
+        "password": "f@st@PI1234"
+      }
+    }
+  }
